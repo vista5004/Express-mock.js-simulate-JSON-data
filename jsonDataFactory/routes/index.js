@@ -33,5 +33,14 @@ router.get('/mockjsNumDminDmax,function(req,res,next){
 	ret=callback+'('+ret+')';
 	req.send(ret);
 })
+Router.get('/mockjsUserInformation',funtion(){
+	var callback=req.query.callback;
+	var data=Mock.mock({
+		name: '@chineseName',
+    		ip: '@ip',
+    		email: '@email',
+    		avatar: '@image'
+	})
+})
 
 module.exports = router;
